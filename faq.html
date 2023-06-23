@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <title>Travel Buddy - turistički vodič</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Custom CSS & JS -->
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <!-- Header Start -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo_white.png" alt="Logo" width="130px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="index.html">Početna</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="destinacije.html">Destinacije</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="recenzije.html">Recenzije i preporuke</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link text-white" href="faq.html">Česta pitanja</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="kontakt.html">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+    <!-- Header End -->
+    <!-- Content Start -->
+    <div class="jumbotron jumbotron-fluid" style="height: 40vh;">
+      <div class="container">
+        <h1>Česta pitanja</h1>
+      </div>
+    </div>
+    
+    <div class="container">   
+        <br><br>
+        <div class="row">
+          <div class="accordion" id="faq">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="pitanje1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#odgovor1" aria-expanded="true" aria-controls="odgovor1">
+                  Kako mogu dobiti dodatne informacije o smještaju na vašim preporučenim destinacijama?
+                </button>
+              </h2>
+              <div id="odgovor1" class="accordion-collapse collapse show" aria-labelledby="pitanje1" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Za više informacija o smještaju na našim preporučenim destinacijama, preporučujemo da posjetite stranicu svake destinacije. 
+                  Tamo ćete pronaći opise, slike i recenzije smještaja koje smo pažljivo odabrali. 
+                  Također, možete pogledati YouTube videozapis ispod koji će vam pružiti virtualni pregled smještajnih mogućnosti.
+                  <br><br>
+                  <div class="text-center">
+                    <iframe width="800" height="400" src="https://www.youtube.com/embed/3FM1waTeTDE" title="Maldives Travel Guide" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="pitanje2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#odgovor2" aria-expanded="false" aria-controls="odgovor2">
+                  Kako mogu dobiti informacije o otkazivanju putovanja i povratu novca?
+                </button>
+              </h2>
+              <div id="odgovor2" class="accordion-collapse collapse" aria-labelledby="pitanje2" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Za informacije o otkazivanju putovanja i povratu novca, molimo vas da nas kontaktirate putem naše kontakt forme ili putem e-pošte. 
+                  Rado ćemo vam pružiti detalje o našim uvjetima otkazivanja i postupku povrata novca. 
+                  Molimo imajte na umu da uvjeti otkazivanja mogu varirati ovisno o smještaju i vrsti rezervacije.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="pitanje3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#odgovor3" aria-expanded="false" aria-controls="odgovor3">
+                  Koje su najbolje mjesece za posjetiti određenu destinaciju?
+                </button>
+              </h2>
+              <div id="odgovor3" class="accordion-collapse collapse" aria-labelledby="pitanje3" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Najbolje mjesece za posjetiti određenu destinaciju ovise o mnogim faktorima, uključujući klimu, gužve i lokalne događaje. 
+                  Na stranici svake destinacije pružamo informacije o sezonalnosti i vremenskim uvjetima. 
+                  Preporučujemo da provjerite te informacije kako biste odabrali najpogodniji mjesec za posjet.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="pitanje4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#odgovor4" aria-expanded="false" aria-controls="odgovor4">
+                  Trebam li osiguranje za putovanje i kako ga mogu dobiti?
+                </button>
+              </h2>
+              <div id="odgovor4" class="accordion-collapse collapse" aria-labelledby="pitanje4" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  Preporučujemo da imate putno osiguranje kako biste bili zaštićeni od nepredviđenih situacija. 
+                  Možete dobiti putno osiguranje putem različitih osiguravajućih društava ili putem specijaliziranih web stranica. 
+                  Savjetujemo vam da pregledate različite ponude i usporedite pokrivenost i cijene kako biste pronašli najbolju opciju za svoje potrebe.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="pitanje5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#odgovor5" aria-expanded="false" aria-controls="odgovor5">
+                  Kako se snalaziti s lokalnim jezikom i jezičnim barijerama?
+                </button>
+              </h2>
+              <div id="odgovor5" class="accordion-collapse collapse" aria-labelledby="pitanje5" data-bs-parent="#faq">
+                <div class="accordion-body">
+                  U slučaju jezičnih barijera, preporučujemo da koristite nekoliko osnovnih fraza na lokalnom jeziku. 
+                  Nositelji engleskog jezika često su dostupni na turističkim mjestima. Također, možete koristiti aplikacije i prijevodiče kako biste olakšali komunikaciju. 
+                  Budite strpljivi i otvoreni prema lokalnom stanovništvu - geste, osmijesi i znakovi dobre volje mogu biti od velike pomoći.
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div><br><br>
+    </div>
+    <!-- Content End -->
+
+    <!-- Footer Start -->
+    <footer>
+        <div class="container-fluid py-4" id="footer_container">
+            <div class="row">
+                <div class="col-12 col-lg-4 col-md-3 text-center">
+                    <div class="footer-left">
+                        <p><img src="images/logo_white.png" alt="Logo" width="120px"></p>
+                        <p>Autor Mario Jonjić · Informatički projekt 1</a></p>
+                        <p>© 2023 · Sva prava pridržana</p>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-6" style="padding-left: 10%;">
+                    <div class="footer-center">
+                      <h6><b>Destinacije</b></h6>
+                        <ul>
+                          <li><a href="destinacije.html#destinacija_rim">Rim</a></li>
+                          <li><a href="destinacije.html#destinacija_tokio">Tokio</a></li>
+                          <li><a href="destinacije.html#destinacija_pariz">Pariz</a></li>
+                          <li><a href="destinacije.html#destinacija_london">London</a></li>
+                          <li><a href="destinacije.html#destinacija_barcelona">Barcelona</a></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 col-md-3" style="padding-left: 10%;">
+                    <div class="footer-right">
+                      <h6><b>Navigacija</b></h6>
+                        <ul>
+                            <li><a href="index.html">Početna</a></li>
+                            <li><a href="destinacije.html">Destinacije</a></li>
+                            <li><a href="recenzije.html">Recenzije i preporuke</a></li>
+                            <li><a href="faq.html">Česta pitanja</a></li>
+                            <li><a href="kontakt.html">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+      
+    <button type="button" class="btn btn-primary btn-floating btn-lg" id="btn-back-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html>
