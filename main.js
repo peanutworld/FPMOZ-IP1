@@ -23,6 +23,17 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
+        // CAPTCHA
+        var captcha = generate_captcha(7);
+        var input = prompt('Unesite CAPTCHA kod:\n' + captcha);
+        if (input === null) {
+            return;
+        }
+        if (input !== captcha) {
+            alert('Pogrešan CAPTCHA kod. Pokušajte ponovo.');
+            return;
+        }
+
         // Provjera valjanosti e-mail adrese
         var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
@@ -35,6 +46,16 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("Poruka: " + poruka);
         alert('Forma je uspješno validirana i spremna za slanje!');
         document.getElementById('kontakt-forma').reset();
+    }
+
+    function generate_captcha(length) {
+      var characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      var generated_string = '';
+      for (var i = 0; i < length; i++) {
+          var randomIndex = Math.floor(Math.random() * characters.length);
+          generated_string += characters.charAt(randomIndex);
+      }
+      return generated_string;
     }
     // End - Funkcija za provjeru validnosti forme prije slanja
 
@@ -51,25 +72,32 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function backToTop() {
-      var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-
-      if (currentScroll > 0) {
-        window.requestAnimationFrame(backToTop);
-        window.scrollTo(0, currentScroll - (currentScroll / 10));
-      }
+      window.scrollTo({top: 0, behavior: 'smooth'});
     }
 
     // Start - Skripta za header koja mjenja boju headera i teksta kad se scrolla, napisana u jQueryu
     $(document).ready(function() {
+      var logoImage = $('.navbar-brand img');
+      var transparentLogo = 'images/logo_white.png';
+      var coloredLogo = 'images/logo.png';
+      var navbarTogglerIcon = $('.navbar-toggler-icon');
+      var backtotop = $('#btn-back-to-top');
+    
+      // Provjera širine prozora preglednika
+      var windowWidth = $(window).width();
+      var isMobile = windowWidth < 900;
+    
+      if (isMobile) { // Ako je mobilni uređaj
+        $('.navbar').removeClass('bg-transparent').addClass('bg-light');
+        logoImage.attr('src', coloredLogo);
+        $('.navbar a.nav-link').removeClass('text-white').addClass('text-black');
+        navbarTogglerIcon.css('filter', 'invert(0)');
+      }
+    
       $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        var logoImage = $('.navbar-brand img');
-        var transparentLogo = 'images/logo_white.png';
-        var coloredLogo = 'images/logo.png';
-        var navbarTogglerIcon = $('.navbar-toggler-icon');
-        var backtotop = $('#btn-back-to-top');
     
-        if (scroll > 0) {
+        if (scroll > 0 || isMobile) {
           $('.navbar').removeClass('bg-transparent').addClass('bg-light');
           logoImage.attr('src', coloredLogo);
           $('.navbar a.nav-link').removeClass('text-white').addClass('text-black');
@@ -87,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
           backtotop.fadeOut();
         }
       });
-    });    
+    });
     // End - Skripta za header koja mjenja boju headera i teksta kad se scrolla, napisana u jQueryu
       
 });
